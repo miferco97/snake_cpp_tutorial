@@ -10,6 +10,7 @@
 
 #include <opencv2/opencv.hpp>
 #include "shape.hpp"
+#include "circle.hpp"
 #include "timed_function.hpp"
 #include "snake.hpp"
 #include "star.hpp"
@@ -218,7 +219,6 @@ private:
             break;
         }
     };
-
   
 }; //Snake
 
