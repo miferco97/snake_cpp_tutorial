@@ -47,7 +47,6 @@ public:
         cv::fillConvexPoly(img, points_vec, cv::Scalar(color_[0], color_[1], color_[2]),cv::LINE_AA,0);
         cv::polylines(img, points_vec, true, cv::Scalar(0,0,0),1, cv::LINE_AA, 0);
 
-
     };
 
     void set_thickness(float thickness){
