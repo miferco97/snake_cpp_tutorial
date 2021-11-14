@@ -34,18 +34,19 @@ public:
             float angle = i * 2 * CV_PI / 10;
             if (i % 2 == 0)
             {
-                point.x += size_ * cos(angle);
-                point.y += size_ * sin(angle);
+                point.x += size_ * std::cos(angle);
+                point.y += size_ * std::sin(angle);
             }
             else
             {    
-                point.x += size_/2.5 * cos(angle);
-                point.y += size_/2.5 * sin(angle);
+                point.x += size_/2.5 * std::cos(angle);
+                point.y += size_/2.5 * std::sin(angle);
             }
             points_vec.push_back(point);
         }
         cv::fillConvexPoly(img, points_vec, cv::Scalar(color_[0], color_[1], color_[2]),cv::LINE_AA,0);
-        cv::polylines(img, points_vec, true, cv::Scalar(0,0,0), 1, cv::LINE_AA, 0);
+        cv::polylines(img, points_vec, true, cv::Scalar(0,0,0),1, cv::LINE_AA, 0);
+
 
     };
 
